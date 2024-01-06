@@ -1,0 +1,66 @@
+@use '../../styles/export.scss' as *;
+@use 'sass:map';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 750;
+  backdrop-filter: blur(8px);
+  background-color: rgb(41 41 41 / 13%);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.inner {
+  height: 100vh;
+  background-color: $primary;
+  border-left: $stroke-width solid $stroke;
+  border-right: $stroke-width solid $stroke;
+  margin-right: - map.get($page, padding-global, desktop);
+  grid-column: 7 / span 6;
+  position: relative;
+  overflow-y: scroll;
+  @include mobile {
+    grid-column: span 12;
+    margin-left: - map.get($page, padding-global, mobile);
+    margin-right: - map.get($page, padding-global, mobile);
+  }
+}
+
+.head {
+  padding: var(--s);
+  border-bottom: $stroke-width solid $stroke;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  column-gap: 2rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: $primary;
+}
+
+.content {
+  padding: var(--m) var(--s);
+}
+
+.close {
+  width: var(--m);
+  justify-self: end;
+  cursor: crosshair;
+}
+
+.mock {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 33%;
+  height: 100%;
+  background-color: $primary;
+}

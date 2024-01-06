@@ -1,0 +1,23 @@
+@use '../../../../../styles/export.scss' as *;
+
+.section {
+  padding: var(--xxl) 0;
+}
+
+.content {
+  grid-column: span 6;
+  @include mobile {
+    grid-column: span 12;
+    margin-bottom: var(--m);
+  }
+}
+
+.image {
+  @include object-fit-wrap;
+  padding-top: 100%;
+  grid-column: 8 / span 5;
+  border-radius: $border-radius;
+  @include mobile {
+    grid-column: span 12;
+  }
+}

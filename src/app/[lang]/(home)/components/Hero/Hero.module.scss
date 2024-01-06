@@ -1,0 +1,27 @@
+@use '../../../../../styles/export.scss' as *;
+
+.section {
+  padding: 16rem 0 0;
+
+  @include mobile {
+    padding: 12rem 0 0;
+  }
+}
+
+.title {
+  grid-column: span 12;
+  margin-bottom: var(--xl);
+  @include mobile {
+    grid-column: span 12;
+  }
+}
+
+.subTitle {
+  width: 100%;
+  max-width: 40.8rem;
+}
+
+.svg {
+  @include fluid;
+  grid-column: span 12;
+}

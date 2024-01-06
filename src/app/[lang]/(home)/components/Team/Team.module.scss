@@ -1,0 +1,94 @@
+@use '../../../../../styles/export.scss' as *;
+
+.section {
+  padding: 0;
+}
+
+.team {
+  padding: var(--m) 0;
+  height: 16rem;
+  position: relative;
+  overflow: hidden;
+  @include fluid;
+  @include padding-global;
+  @include mobile {
+    height: 10rem;
+  }
+}
+
+.title {
+  grid-column: span 10;
+  @include mobile {
+    grid-column: span 9;
+  }
+}
+
+.open {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: crosshair;
+  @include mobile {
+    grid-column: 10 / span 3;
+  }
+
+  .icon {
+    width: var(--xl);
+    @include mobile {
+      width: var(--l);
+    }
+  }
+}
+
+.content {
+  grid-column: span 12;
+  margin-top: 3rem;
+  @include auto-alpha;
+}
+
+.image {
+  grid-column: span 5;
+  min-height: 35rem;
+  @include object-fit-wrap;
+  border-radius: $border-radius;
+  @include mobile {
+    min-height: 100%;
+    height: 25rem;
+    grid-column: span 12;
+    margin-bottom: var(--l);
+  }
+
+  img {
+    object-position: center 30%;
+  }
+}
+
+.infos {
+  grid-column: 7 / span 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @include mobile {
+    grid-column: span 12;
+    margin-top: var(--s);
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    column-gap: var(--s);
+    justify-items: start;
+    margin-bottom: var(--s);
+    @include mobile {
+      grid-auto-flow: row;
+      row-gap: var(--xs);
+    }
+  }
+}
+
+.contact {
+  margin-top: var(--s);
+}

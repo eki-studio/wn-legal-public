@@ -1,0 +1,67 @@
+@use '../../../../../styles/export.scss' as *;
+@use 'sass:map';
+
+.container {
+  column-gap: 0;
+  @include mobile {
+    column-gap: 0.25rem;
+  }
+}
+
+.content {
+  grid-column: span 6;
+  @include mobile {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    column-gap: var(--s);
+    padding: var(--padding-global) var(--padding-global) 3.5rem
+      var(--padding-global);
+    max-width: 45rem;
+
+    @include mobile {
+      padding-top: var(--l);
+      order: 2;
+      margin-bottom: var(--l);
+    }
+  }
+}
+
+.svg_desktop {
+  color: $stroke;
+  grid-column: span 6;
+}
+
+.svg_mobile {
+  color: $stroke;
+  grid-column: span 12;
+  order: 1;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  column-gap: var(--s);
+  justify-items: start;
+  margin-top: var(--s);
+  @include mobile {
+    grid-auto-flow: row;
+    row-gap: var(--xs);
+  }
+}
+
+.shape {
+  grid-column: span 6;
+  margin-bottom: -0.5rem;
+  color: $stroke;
+}

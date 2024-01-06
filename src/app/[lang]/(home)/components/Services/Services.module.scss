@@ -1,0 +1,99 @@
+@use '../../../../../styles/export.scss' as *;
+@use 'sass:map';
+
+.content {
+  grid-column: span 5;
+  margin-top: var(--xl);
+  @include mobile {
+    grid-column: span 12;
+    margin-bottom: var(--xl);
+  }
+}
+
+.shape_desktop {
+  grid-column: 7 / span 6;
+  margin-right: - map.get($page, padding-global, desktop);
+  margin-bottom: -0.4rem;
+  color: $stroke;
+}
+
+.service {
+  padding: var(--m) 0;
+  height: 16rem;
+
+  position: relative;
+  overflow: hidden;
+  background-color: $primary;
+  @include fluid;
+  @include padding-global;
+  @include mobile {
+    height: 10rem;
+  }
+
+  &[data-id='notariato'] {
+    background-color: $green;
+  }
+
+  &[data-id='consulenza'] {
+    background-color: $yellow;
+  }
+
+  &[data-id='patrocinio'] {
+    background-color: $red;
+  }
+
+  &[data-id='mediazione'] {
+    background-color: $blue;
+  }
+
+  .title {
+    grid-column: span 10;
+    display: flex;
+    align-items: center;
+    @include mobile {
+      grid-column: span 9;
+    }
+  }
+
+  .open {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: crosshair;
+    @include mobile {
+      grid-column: 10 / span 3;
+    }
+
+    .icon {
+      width: var(--xl);
+      @include mobile {
+        width: var(--l);
+      }
+    }
+  }
+
+  .content {
+    grid-column: span 12;
+    margin-top: 3rem;
+    @include auto-alpha;
+  }
+
+  .desc {
+    grid-column: span 5;
+    margin-top: var(--xs);
+    @include mobile {
+      grid-column: span 12;
+      grid-row: 2 / span 1;
+    }
+  }
+
+  .svg {
+    grid-column: 8 / span 5;
+    @include mobile {
+      grid-column: span 12;
+      grid-row: 1 / span 1;
+      margin-bottom: var(--m);
+    }
+  }
+}

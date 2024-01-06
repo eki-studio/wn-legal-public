@@ -1,0 +1,38 @@
+@use '../../styles/export.scss' as *;
+@use 'sass:map';
+
+.cookie {
+  position: fixed;
+  bottom: var(--s);
+
+  z-index: 500;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.inner {
+  pointer-events: all;
+  position: relative;
+  padding: var(--xs);
+  border-radius: $border-radius;
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: flex-start;
+  width: 18rem;
+  border: 1px solid $stroke;
+  right: 0;
+  right: -3rem;
+  @include mobile {
+    right: 0;
+  }
+}

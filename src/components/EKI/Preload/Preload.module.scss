@@ -1,0 +1,32 @@
+@use '../../../styles/export.scss' as *;
+@use 'sass:map';
+
+.preload {
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity $duration-default $ease-out-quad;
+}
+
+.inner {
+  background-color: $primary;
+  width: 100%;
+  max-width: calc(map.get($page, max-width) - 4px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: var(--l);
+
+  @include auto-alpha;
+}

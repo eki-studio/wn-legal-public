@@ -1,0 +1,21 @@
+@use '../../styles/export.scss' as *;
+
+.line {
+  height: $stroke-width;
+  position: absolute;
+  width: 100%;
+
+  &.bottom {
+    bottom: 0;
+  }
+
+  &.top {
+    top: 0;
+  }
+}
+
+.inner {
+  @include fluid;
+  height: $stroke-width;
+  overflow: hidden;
+}

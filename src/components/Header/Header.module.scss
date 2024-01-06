@@ -1,0 +1,179 @@
+@use '../../styles/export.scss' as *;
+@use 'sass:map';
+
+.header {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  z-index: 500;
+  @include mobile {
+    top: 1.25rem;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .inner {
+    padding: var(--xxs) var(--xs);
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: auto;
+    justify-self: start;
+    width: 15rem;
+    border: $stroke-width solid $secondary;
+    background-color: $primary;
+    border-radius: $border-radius;
+    height: 4rem;
+    overflow: hidden;
+    @include mobile {
+      height: 3.75rem;
+    }
+  }
+
+  .head {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: var(--xs);
+    align-items: center;
+    grid-auto-flow: column;
+  }
+
+  .logo {
+    width: 3rem;
+    height: 3rem;
+    @include mobile {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-self: center;
+    column-gap: var(--xxs);
+    cursor: crosshair;
+    text-transform: uppercase;
+
+    .menu_icon {
+      height: 1.25rem;
+      width: 1.25rem;
+      stroke-width: $stroke-width;
+      color: $secondary;
+    }
+  }
+
+  .btn_theme {
+    width: 2.5rem;
+    height: 1.25rem;
+    background-color: $primary;
+    border-radius: $border-radius;
+    border: $stroke-width solid $secondary;
+    cursor: crosshair;
+    justify-self: end;
+    position: relative;
+    overflow: hidden;
+    @include mobile {
+      width: 2.5rem;
+      height: 1.25rem;
+    }
+
+    .switcher {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background-color: $secondary;
+      top: 0;
+    }
+
+    .icon_wrap {
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.25rem;
+      display: flex;
+      height: 100%;
+      @include mobile {
+        padding: 0 0.25rem;
+      }
+    }
+
+    .icon {
+      width: 0.66rem;
+      height: 0.66rem;
+      color: $secondary;
+      @include mobile {
+        width: 0.75rem;
+        height: 0.75rem;
+        position: relative;
+        top: -0.05rem;
+      }
+    }
+  }
+
+  .nav {
+    margin-top: var(--xxs);
+    border-top: $stroke-width solid $secondary;
+    padding-top: var(--xs);
+    position: relative;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include auto-alpha;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: var(--xxs);
+    margin-bottom: 3rem;
+
+    .link {
+      cursor: crosshair;
+    }
+  }
+
+  .langs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: $stroke-width solid $secondary;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 2rem;
+
+    .lang {
+      text-transform: uppercase;
+      padding: var(--xxs);
+      display: flex;
+      justify-content: center;
+      border-right: $stroke-width solid $secondary;
+      cursor: crosshair;
+      transition:
+        color $duration-default $ease-out-quad,
+        background-color $duration-default $ease-out-quad;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        background-color: $secondary;
+        color: $primary;
+      }
+
+      &.active {
+        background-color: $secondary;
+        color: $primary;
+      }
+    }
+  }
+}

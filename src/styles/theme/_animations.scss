@@ -1,0 +1,35 @@
+@use '../export.scss' as *;
+
+.split-title-chars {
+  @include auto-alpha;
+
+  transform: translateY(1rem);
+}
+
+.split-title-words {
+  overflow: hidden;
+}
+
+[data-anim='fadeIn'] {
+  @include auto-alpha;
+}
+
+//CSS Animations
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  height: 0;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}

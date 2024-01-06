@@ -1,0 +1,35 @@
+@use '../vars.scss' as vars;
+@use 'sass:map';
+
+//Breakpoint
+$mobile-breakpoint: map.get(vars.$breakpoints, 'mobile');
+
+@mixin mobile {
+  @media (max-width: #{$mobile-breakpoint - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$mobile-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin is-page-width {
+  @media (min-width: #{map.get(vars.$page, max-width)}) {
+    @content;
+  }
+}
+
+@mixin hide-mobile {
+  @media (max-width: #{$mobile-breakpoint - 1px}) {
+    display: none;
+  }
+}
+
+@mixin hide-desktop {
+  @media (min-width: #{$mobile-breakpoint}) {
+    display: none;
+  }
+}

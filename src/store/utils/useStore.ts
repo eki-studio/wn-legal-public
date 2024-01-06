@@ -1,0 +1,22 @@
+/*
+ * https://docs.pmnd.rs/zustand/integrations/persisting-store-data
+ * section Next.js SSR
+ */
+
+import { useEffect, useState } from 'react'
+/* eslint-disable no-unused-vars */
+const useStore = <T, F>(
+  store: (callback: (state: T) => unknown) => unknown,
+  callback: (state: T) => F
+) => {
+  const result = store(callback) as F
+  const [data, setData] = useState<F>()
+
+  useEffect(() => {
+    setData(result)
+  }, [result])
+
+  return data
+}
+
+export default useStore

@@ -1,0 +1,162 @@
+@use 'sass:map';
+@use '../export.scss' as *;
+
+p {
+  margin: 0;
+}
+
+body,
+p,
+.text-p1 {
+  font-family: $font-swiss;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.05rem;
+}
+
+.text-p2 {
+  font-size: 1.1875rem;
+  line-height: 130%;
+  @include mobile {
+    font-size: 1.125rem;
+  }
+}
+
+.text-btn {
+  font-size: 0.875rem;
+  line-height: 100%; /* 0.875rem */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-swiss;
+  font-weight: 400;
+}
+
+.title-optima {
+  font-family: $font-optima;
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25rem;
+  @include mobile {
+    font-size: 4rem;
+  }
+}
+
+h1,
+.title-h1 {
+  font-size: 7.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include mobile {
+    font-size: 5.125rem;
+  }
+}
+
+h2,
+.title-h2 {
+  font-size: 4.3125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include mobile {
+    font-size: 3.6875rem;
+  }
+}
+
+h3,
+.title-h3 {
+  font-size: 3.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include mobile {
+    font-size: 2.3125rem;
+  }
+}
+
+h4,
+.title-h4 {
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include mobile {
+    font-size: 1.8125rem;
+  }
+}
+
+h5,
+.title-h5 {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+h6,
+.title-h6 {
+  font-size: 1.4375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @include mobile {
+    font-size: 1.3125rem;
+  }
+}
+
+b {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+
+  li {
+    padding-left: 0.5rem;
+  }
+}
+
+blockquote {
+  border-left: 1px solid $secondary;
+  padding-left: 2rem;
+}
+
+.rich-text {
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 2rem;
+  }
+
+  h5,
+  h6,
+  p,
+  blockquote {
+    margin-bottom: 1rem;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1rem;
+  }
+
+  blockquote {
+    padding-left: 1rem;
+    border-left: 2px solid;
+  }
+}

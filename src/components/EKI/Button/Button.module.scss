@@ -1,0 +1,46 @@
+@use '../../../styles/export.scss' as *;
+
+.button {
+  position: relative;
+  cursor: crosshair;
+  border-radius: $border-radius;
+  border: 1px solid $secondary;
+  background: $primary;
+  display: inline-flex;
+  padding: 0.75rem 1rem;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color $duration-default $ease-out-quad,
+    color $duration-default $ease-out-quad,
+    border-color $duration-default $ease-out-quad;
+
+  @include desktop {
+    &:hover {
+      background-color: $secondary;
+      color: $primary;
+      border-color: $secondary;
+    }
+  }
+
+  &.button_icon {
+    .icon_inner {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: var(--xxs);
+      align-items: center;
+    }
+
+    .icon {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+  }
+}
+
+.active {
+  pointer-events: none;
+  background-color: $secondary;
+  color: $primary;
+  border-color: $secondary;
+}

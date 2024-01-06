@@ -1,0 +1,48 @@
+@use '../export.scss' as *;
+@use 'sass:map';
+
+:root {
+  @each $name, $colors in $theme {
+    @each $color-name, $color-value in $colors {
+      --#{$name}-#{$color-name}: #{$color-value};
+    }
+  }
+}
+
+@mixin theme($name, $color) {
+  --#{$name}: #{$color};
+  .text-#{$name} {
+    color: var(--#{$name});
+  }
+  .bg-#{$name} {
+    color: var(--#{$name});
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $color in map.get($theme, dark) {
+      @include theme($name, $color);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @each $name, $color in map.get($theme, light) {
+      @include theme($name, $color);
+    }
+  }
+}
+
+.theme[data-theme='dark'] {
+  @each $name, $color in map.get($theme, dark) {
+    @include theme($name, $color);
+  }
+}
+
+.theme[data-theme='light'] {
+  @each $name, $color in map.get($theme, light) {
+    @include theme($name, $color);
+  }
+}

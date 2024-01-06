@@ -1,0 +1,116 @@
+@use 'sass:map';
+@use '../export.scss' as *;
+@include fluid-responsive(16, 20, 1440, 1800, false, true);
+@include fluid-responsive(16, 29, 390, 767, false, false);
+
+:root {
+  --color-reverse: invert(1);
+  --stroke-width: 0.0625rem;
+}
+
+html {
+  text-size-adjust: 100%;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  background-color: $primary;
+  color: $secondary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+
+  //font-smoothing: antialiased;
+}
+
+.theme {
+  background-color: $primary;
+  color: $secondary;
+
+  [data-color-reverse] {
+    filter: var(--color-reverse);
+  }
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  transition: opacity $duration-default $ease-out-quad;
+
+  &[data-preload='true'] {
+    .main-wrapper {
+      opacity: 0;
+    }
+  }
+}
+
+.page-wrapper-lines {
+  @media (width < map.get($page, max-width)) {
+    display: none;
+  }
+
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 0;
+
+  .page-wrapper-lines_inner {
+    width: map.get($page, max-width);
+    border-left: $stroke-width solid var(--stroke);
+    border-right: $stroke-width solid var(--stroke);
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.main-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: map.get($page, max-width);
+  margin-left: auto;
+  margin-right: auto;
+  @include padding-global;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(map.get($container, columns, desktop), 1fr);
+  column-gap: map.get($container, gap, desktop);
+
+  @include mobile {
+    grid-template-columns: repeat(map.get($container, columns, mobile), 1fr);
+    column-gap: map.get($container, gap, mobile);
+  }
+
+  @if map.get($container, max-width) {
+    max-width: map.get($container, max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .is-fluid {
+    margin-left: map.get($page, padding-global, desktop);
+    margin-right: map.get($page, padding-global, desktop);
+
+    @include mobile {
+      margin-left: map.get($page, padding-global, mobile);
+      margin-right: map.get($page, padding-global, mobile);
+    }
+  }
+}
+
+section,
+.section {
+  position: relative;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  display: none !important;
+}

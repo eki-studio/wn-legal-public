@@ -1,0 +1,171 @@
+@use 'sass:math';
+
+$base: 16;
+
+/**
+ * Colors
+ */
+
+//This generate root variables
+$theme: (
+  dark: (
+    'primary': #292929,
+    'secondary': #f5f5f5,
+    'accent': #bc4749,
+    'grey': #999,
+    'stroke': #e0e0e0,
+    'green': #73827a,
+    'red': #a06a6a,
+    'blue': #787ca5,
+    'yellow': #b69554,
+  ),
+  light: (
+    'primary': #f5f5f5,
+    'secondary': #292929,
+    'accent': #bc4749,
+    'grey': #999,
+    'stroke': #8f8f8f,
+    'green': #b3bcb7,
+    'red': #bf9b9b,
+    'blue': #b6b8ce,
+    'yellow': #d4c19b,
+  ),
+);
+$primary: var(--primary);
+$secondary: var(--secondary);
+$accent: var(--accent);
+$grey: var(--grey);
+$stroke: var(--stroke);
+$green: var(--green);
+$red: var(--red);
+$blue: var(--blue);
+$yellow: var(--yellow);
+
+/**
+ * Measures
+ */
+$border-radius: 0.125rem;
+$stroke-width: 0.0625rem;
+
+/**
+ * Font Family
+ */
+$font-optima: var(--font-optima);
+$font-swiss: var(--font-swiss);
+
+/**
+ * Layout
+ */
+$page: (
+  padding-global: (
+    desktop: 4rem,
+    mobile: 1.25rem,
+  ),
+  max-width: 1800px,
+);
+$container: (
+  max-width: false,
+  columns: (
+    desktop: 12,
+    mobile: 12,
+  ),
+  gap: (
+    desktop: 1rem,
+    mobile: 0.25rem,
+  ),
+);
+
+/**
+ * Breakpoints
+ */
+
+$breakpoints: (
+  'mobile': 768px,
+);
+
+/**
+ * Spacings
+ */
+$use-spacings-utility-classes: true;
+$use-margin: (
+  all: false,
+  top: false,
+  right: false,
+  bottom: true,
+  left: false,
+  y: false,
+  x: false,
+);
+$use-padding: (
+  all: false,
+  top: false,
+  right: false,
+  bottom: false,
+  left: false,
+  y: false,
+  x: false,
+);
+$spacings: (
+  padding-global: (
+    desktop: 4rem,
+    mobile: 1.25rem,
+  ),
+  xxs: (
+    desktop: 0.5rem,
+    mobile: 0.375rem,
+  ),
+  xs: (
+    desktop: 1rem,
+    mobile: 0.75rem,
+  ),
+  sm: (
+    desktop: 0.75rem,
+    mobile: 0.75rem,
+  ),
+  s: (
+    desktop: 2rem,
+    mobile: 1.5rem,
+  ),
+  m: (
+    desktop: 4rem,
+    mobile: 3rem,
+  ),
+  l: (
+    desktop: 5rem,
+    mobile: 3.75rem,
+  ),
+  xl: (
+    desktop: 8rem,
+    mobile: 6rem,
+  ),
+  xxl: (
+    desktop: 10rem,
+    mobile: 7.5rem,
+  ),
+);
+
+/**
+ * Easings
+ */
+
+$ease-in-quad: var(--ease-in-qua);
+$ease-in-cubic: var(--ease-in-cubic);
+$ease-in-quart: var(--ease-in-quart);
+$ease-in-quint: var(--ease-in-quint);
+$ease-in-expo: var(--ease-in-expo);
+$ease-in-circ: var(--ease-in-circ);
+$ease-out-quad: var(--ease-out-quad);
+$ease-out-cubic: var(--ease-out-cubic);
+$ease-out-quart: var(--ease-out-quart);
+$ease-out-quint: var(--ease-out-quint);
+$ease-out-expo: var(--ease-out-exp);
+$ease-out-circ: var(--ease-out-circ);
+$ease-in-out-quad: var(--ease-in-out-quad);
+$ease-in-out-cubic: var(--ease-in-out-cubic);
+$ease-in-out-quart: var(--ease-in-out-quart);
+$ease-in-out-quint: var(--ease-in-out-quint);
+$ease-in-out-expo: var(--ease-in-out-expo);
+$ease-in-out-circ: var(--ease-in-out-circ);
+$duration-golden: 1618s;
+$duration-r-golden: math.div(1s, 1.618);
+$duration-default: $duration-r-golden;

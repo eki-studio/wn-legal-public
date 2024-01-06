@@ -1,0 +1,10 @@
+@use '../../../styles/export.scss' as *;
+@use 'sass:map';
+
+.layout {
+  transition: opacity $duration-default $ease-out-quad;
+
+  &[data-preload='true'] {
+    opacity: 0;
+  }
+}

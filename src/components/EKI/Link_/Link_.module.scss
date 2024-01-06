@@ -1,0 +1,9 @@
+@use '../../../styles/export.scss' as *;
+
+.link {
+  position: relative;
+}
+
+.active {
+  pointer-events: none;
+}

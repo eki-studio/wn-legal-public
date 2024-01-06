@@ -1,0 +1,68 @@
+@use '../../../styles/export.scss' as *;
+@use 'sass:map';
+@use 'sass:math';
+
+.scrollBar {
+  width: 100vw;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: $primary;
+  z-index: 450;
+
+  @include mobile {
+    display: none;
+  }
+
+  transition: opacity $duration-default $ease-out-quad;
+
+  &[data-preload='true'] {
+    opacity: 0;
+  }
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: $stroke-width solid $stroke;
+  max-width: map.get($page, max-width);
+  padding-left: 0;
+  padding-right: 1rem;
+  left: auto;
+  right: auto;
+
+  @include is-page-width {
+    border-left: $stroke-width solid $stroke;
+    border-right: $stroke-width solid $stroke;
+  }
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+}
+
+$random: math.random(4);
+
+.scroller {
+  height: calc(1rem - $stroke-width);
+  width: 1rem;
+  background-color: var(--stroke);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .square {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $primary;
+  }
+}

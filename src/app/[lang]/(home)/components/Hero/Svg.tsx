@@ -1,0 +1,461 @@
+import { Box } from '@/components'
+import $ from './Hero.module.scss'
+
+export const SvgDesktop = () => {
+  return (
+    <Box className={$.svg} anim="hero-svg" data-svg="home-hero" animRefresh>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        viewBox="0 0 1440 602"
+        fill="none"
+        strokeWidth="var(--stroke-width)"
+      >
+        <line
+          x1="0.000610352"
+          y1="1.33203"
+          x2="1440"
+          y2="1.33203"
+          stroke="var(--stroke)"
+        ></line>
+        <g data-move-big>
+          <line
+            x1="1318"
+            y1="86.332"
+            x2="1404"
+            y2="86.332"
+            stroke="var(--stroke)"
+          ></line>
+          <circle cx="1318" cy="87" r="85.5" stroke="var(--stroke)"></circle>
+        </g>
+        <g data-move-vertical>
+          <line
+            x1="518"
+            y1="512.827"
+            x2="606.5"
+            y2="512.827"
+            stroke="var(--stroke)"
+          ></line>
+          <circle cx="518" cy="513.5" r="88" stroke="var(--stroke)"></circle>
+        </g>
+        <g data-move-small>
+          <line
+            x1="633"
+            y1="147.451"
+            x2="658"
+            y2="147.451"
+            stroke="var(--stroke)"
+          ></line>
+          <circle cx="633" cy="148" r="24.5" stroke="var(--stroke)"></circle>
+        </g>
+        <g data-rotate>
+          <circle cx="762" cy="447" r="152.5" stroke="var(--stroke)"></circle>
+          <line
+            x1="764.5"
+            y1="400"
+            x2="764.5"
+            y2="496"
+            stroke="var(--stroke)"
+          ></line>
+        </g>
+        <rect
+          x="1046"
+          y="241"
+          width="33"
+          height="32"
+          fill="var(--yellow)"
+          data-fill
+        ></rect>
+        <rect
+          x="1339"
+          y="535"
+          width="34"
+          height="33"
+          fill="var(--red)"
+          data-fill
+        ></rect>
+        <line
+          x1="607.501"
+          y1="1.83203"
+          x2="607.501"
+          y2="601.832"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="0.000610352"
+          y1="601.332"
+          x2="1440"
+          y2="601.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1079"
+          y1="293.332"
+          x2="1440"
+          y2="293.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="916.001"
+          y1="272.332"
+          x2="1079"
+          y2="272.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1012"
+          y1="240.5"
+          x2="1079"
+          y2="240.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1012.5"
+          y1="270.832"
+          x2="1012.5"
+          y2="172.832"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1045.5"
+          y1="271.832"
+          x2="1045.5"
+          y2="240"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="607"
+          y1="173.5"
+          x2="1440"
+          y2="173.5"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="607.001"
+          y1="293.332"
+          x2="916.001"
+          y2="293.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="916.001"
+          y1="436.332"
+          x2="1440"
+          y2="436.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="915.501"
+          y1="1.83203"
+          x2="915.501"
+          y2="601.832"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1176.5"
+          y1="174.832"
+          x2="1176.5"
+          y2="601.832"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1079.5"
+          y1="174.832"
+          x2="1079.5"
+          y2="434.832"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1079"
+          y1="293.332"
+          x2="1440"
+          y2="293.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="916.001"
+          y1="272.332"
+          x2="1079"
+          y2="272.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1012.5"
+          y1="272"
+          x2="1012.5"
+          y2="172.832"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="916.001"
+          y1="436.332"
+          x2="1440"
+          y2="436.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1176.5"
+          y1="173"
+          x2="1176.5"
+          y2="602"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1079.5"
+          y1="173"
+          x2="1079.5"
+          y2="436"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1339.5"
+          y1="436"
+          x2="1339.5"
+          y2="602"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1372.5"
+          y1="535"
+          x2="1372.5"
+          y2="602"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1339"
+          y1="535.332"
+          x2="1440"
+          y2="535.332"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="1339"
+          y1="567.5"
+          x2="1373"
+          y2="567.5"
+          stroke="var(--stroke)"
+        ></line>
+        <rect
+          x="362.832"
+          y="204"
+          width="34"
+          height="34"
+          transform="rotate(90 362.832 204)"
+          fill="var(--blue)"
+          data-fill
+        ></rect>
+        <rect
+          x="67.832"
+          y="498"
+          width="34"
+          height="34"
+          transform="rotate(90 67.832 498)"
+          fill="var(--green)"
+          data-fill
+        ></rect>
+        <line
+          x1="330"
+          y1="204.5"
+          x2="363"
+          y2="204.5"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="428.5"
+          y1="1"
+          x2="428.5"
+          y2="602"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="308.5"
+          y1="238"
+          x2="308.5"
+          y2="602"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="329.5"
+          y1="74.9996"
+          x2="329.5"
+          y2="238"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="362.5"
+          y1="171"
+          x2="362.5"
+          y2="238"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="330"
+          y1="171.5"
+          x2="429"
+          y2="171.5"
+          stroke="var(--stroke)"
+        ></line>
+        <path d="M165 75L165 601" stroke="var(--stroke)"></path>
+        <line
+          x1="429.001"
+          y1="334.5"
+          x2="0.00118164"
+          y2="335.5"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="428"
+          y1="238.5"
+          x2="165"
+          y2="238.5"
+          stroke="var(--stroke)"
+        ></line>
+        <line x1="165" y1="498.5" y2="498.5" stroke="var(--stroke)"></line>
+        <line x1="68" y1="531.5" y2="531.5" stroke="var(--stroke)"></line>
+        <line
+          x1="67.5"
+          y1="498"
+          x2="67.5"
+          y2="601"
+          stroke="var(--stroke)"
+        ></line>
+        <line
+          x1="34.5"
+          y1="498"
+          x2="34.5"
+          y2="532"
+          stroke="var(--stroke)"
+        ></line>
+        <line y1="74.5" x2="429" y2="74.5" stroke="var(--stroke)"></line>
+      </svg>
+    </Box>
+  )
+}
+
+export const SvgMobile = () => (
+  <Box className={$.svg} anim="draw-svg" animRefresh>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      viewBox="0 0 400 342"
+      fill="none"
+      strokeWidth="var(--stroke-width)"
+      className="hide-desktop"
+    >
+      <rect
+        x="102"
+        y="307.168"
+        width="34"
+        height="34"
+        fill="var(--green)"
+        data-fill
+      ></rect>
+      <rect
+        x="103"
+        y="35"
+        width="34"
+        height="33"
+        transform="rotate(-90 103 35)"
+        fill="var(--red)"
+        data-fill
+      ></rect>
+      <rect
+        x="33"
+        y="165"
+        width="34"
+        height="33"
+        transform="rotate(90 33 165)"
+        fill="var(--blue)"
+        data-fill
+      ></rect>
+      <rect
+        x="33"
+        y="273"
+        width="34"
+        height="33"
+        transform="rotate(90 33 273)"
+        fill="var(--yellow)"
+        data-fill
+      ></rect>
+      <line x1="136.5" y1="1" x2="136.5" y2="341" stroke="var(--stroke)"></line>
+      <line y1="198.5" x2="136" y2="198.5" stroke="var(--stroke)"></line>
+      <line
+        x1="136"
+        y1="264.5"
+        x2="400"
+        y2="264.5"
+        stroke="var(--stroke)"
+      ></line>
+      <g data-rotate>
+        <line
+          x1="267.5"
+          y1="265"
+          x2="267.5"
+          y2="1"
+          stroke="var(--stroke)"
+        ></line>
+        <circle cx="268" cy="133" r="131.5" stroke="var(--stroke)"></circle>
+      </g>
+      <line
+        x1="322.5"
+        y1="341"
+        x2="322.5"
+        y2="265"
+        stroke="var(--stroke)"
+      ></line>
+      <line y1="340.5" x2="400" y2="340.5" stroke="var(--stroke)"></line>
+      <line y1="0.5" x2="400" y2="0.5" stroke="var(--stroke)"></line>
+      <line
+        x1="102.5"
+        y1="341"
+        x2="102.5"
+        y2="307"
+        stroke="var(--stroke)"
+      ></line>
+      <line
+        x1="70"
+        y1="307.5"
+        x2="136"
+        y2="307.5"
+        stroke="var(--stroke)"
+      ></line>
+      <line
+        x1="4.37114e-08"
+        y1="272.5"
+        x2="70"
+        y2="272.5"
+        stroke="var(--stroke)"
+      ></line>
+      <line x1="-6" y1="307.5" x2="33" y2="307.5" stroke="var(--stroke)"></line>
+      <line x1="69.5" y1="341" x2="69.5" y2="241" stroke="var(--stroke)"></line>
+      <line
+        x1="112.5"
+        y1="307"
+        x2="112.5"
+        y2="199"
+        stroke="var(--stroke)"
+      ></line>
+      <line x1="136" y1="35.5" x2="103" y2="35.5" stroke="var(--stroke)"></line>
+      <line x1="102.5" y1="68" x2="102.5" y2="1" stroke="var(--stroke)"></line>
+      <line x1="94.5" y1="199" x2="94.5" y2="68" stroke="var(--stroke)"></line>
+      <line
+        x1="38.5"
+        y1="131"
+        x2="38.5"
+        y2="-2.18557e-08"
+        stroke="var(--stroke)"
+      ></line>
+      <line x1="137" y1="67.5" x2="39" y2="67.5" stroke="var(--stroke)"></line>
+      <line x1="33.5" y1="131" x2="33.5" y2="199" stroke="var(--stroke)"></line>
+      <line
+        x1="4.37114e-08"
+        y1="130.5"
+        x2="95"
+        y2="130.5"
+        stroke="var(--stroke)"
+      ></line>
+      <line x1="33.5" y1="241" x2="33.5" y2="341" stroke="var(--stroke)"></line>
+      <line x1="2" y1="240.5" x2="112" y2="240.5" stroke="var(--stroke)"></line>
+    </svg>
+  </Box>
+)
